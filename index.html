@@ -105,6 +105,31 @@
             </label>
             <button class="primary" type="submit">加入收藏</button>
           </form>
+
+          <section class="shared-panel">
+            <div class="panel-head">
+              <h2>共享规则</h2>
+              <span id="sharedCount"></span>
+            </div>
+            <p class="shared-hint">同一系列的通用规则只维护一份：选分类、勾选适用游戏，各游戏详情会标注来源。</p>
+            <form id="sharedRuleForm" class="shared-form">
+              <label>
+                分类
+                <select id="sharedCategoryInput"></select>
+              </label>
+              <label>
+                规则内容
+                <textarea id="sharedTextInput" rows="3" placeholder="例：两人局需要按说明书启用变体设置" required></textarea>
+              </label>
+              <fieldset class="shared-games">
+                <legend>适用游戏</legend>
+                <div id="sharedGameChecks" class="shared-checks"></div>
+              </fieldset>
+              <button class="primary" type="submit" id="sharedSubmitBtn">保存共享规则</button>
+              <button type="button" id="sharedCancelBtn" hidden>取消编辑</button>
+            </form>
+            <div id="sharedRuleList" class="shared-list"></div>
+          </section>
         </aside>
 
         <section class="panel list-panel">
@@ -121,6 +146,8 @@
       </section>
     </main>
 
+    <script src="shared-store.js"></script>
+    <script src="shared-resolver.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -369,6 +369,151 @@ label {
   flex: 1;
 }
 
+.shared-panel {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.shared-hint {
+  margin: -6px 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shared-form {
+  display: grid;
+  gap: 10px;
+}
+
+.shared-games {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.shared-games legend {
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.shared-checks {
+  display: grid;
+  gap: 6px;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.shared-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.shared-check input {
+  width: auto;
+  margin: 0;
+}
+
+.shared-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.shared-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+}
+
+.shared-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.shared-games-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shared-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.shared-card-actions button {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.shared-entry-main {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
+
+.shared-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pill.shared {
+  background: rgba(57, 116, 91, 0.12);
+  color: var(--green);
+}
+
+.pill.overridden {
+  background: rgba(213, 162, 61, 0.18);
+  color: #8a6414;
+}
+
+.pill.pending {
+  background: rgba(179, 72, 72, 0.12);
+  color: var(--red);
+}
+
+.shared-origin {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shared-entry-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rule-list .shared-entry-actions button {
+  width: auto;
+  height: auto;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.shared-entry textarea {
+  font-size: 13px;
+}
+
 @media (max-width: 1160px) {
   .topbar {
     align-items: stretch;
