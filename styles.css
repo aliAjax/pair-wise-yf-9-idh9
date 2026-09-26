@@ -369,6 +369,228 @@ label {
   flex: 1;
 }
 
+/* ---- 共享规则库 ---- */
+
+.shared-panel {
+  margin-bottom: 16px;
+}
+
+.shared-form {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.shared-form-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.shared-games {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.picker-label,
+.form-hint {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.game-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  padding: 5px 11px;
+  cursor: pointer;
+}
+
+.game-chip input {
+  width: auto;
+  accent-color: var(--blue);
+}
+
+.shared-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.shared-form-actions .form-hint {
+  color: var(--red);
+}
+
+.shared-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.shared-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.shared-card-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.shared-card-head button {
+  margin-left: auto;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.shared-card-head button + button {
+  margin-left: 0;
+}
+
+.shared-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---- 规则来源标记 / 待确认 ---- */
+
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 2px 6px;
+  margin-right: 7px;
+  white-space: nowrap;
+}
+
+.tag-shared {
+  background: rgba(49, 95, 134, 0.12);
+  color: var(--blue);
+}
+
+.tag-override {
+  background: rgba(116, 100, 155, 0.14);
+  color: var(--lavender);
+}
+
+.tag-cat {
+  background: rgba(57, 116, 91, 0.13);
+  color: var(--green);
+}
+
+.tag-pending {
+  background: rgba(179, 72, 72, 0.14);
+  color: var(--red);
+}
+
+.rule-text {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.rule-list li.pending > .rule-text {
+  color: var(--red);
+}
+
+.pending-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eef0f2;
+  padding: 0 0 7px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pending-banner-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.pending-banner button {
+  padding: 4px 9px;
+  font-size: 12px;
+}
+
+.rule-actions {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.rule-actions button {
+  width: auto;
+  height: auto;
+  padding: 3px 9px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.rule-actions button[title="删除本地规则"] {
+  width: 30px;
+  padding: 0;
+}
+
+.rule-list li.override-edit-row {
+  display: block;
+}
+
+.override-form {
+  display: grid;
+  gap: 8px;
+}
+
+.override-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.override-actions button {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.pending-note {
+  margin: 0;
+  border-left: 3px solid var(--red);
+  background: rgba(179, 72, 72, 0.07);
+  border-radius: 4px;
+  padding: 7px 9px;
+  color: var(--red);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.summary strong.attention {
+  color: var(--red);
+}
+
 @media (max-width: 1160px) {
   .topbar {
     align-items: stretch;
@@ -377,6 +599,10 @@ label {
 
   .controls,
   .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shared-form-row {
     grid-template-columns: 1fr;
   }
 

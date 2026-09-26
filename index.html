@@ -63,6 +63,42 @@
         </label>
       </section>
 
+      <section class="panel shared-panel">
+        <div class="panel-head">
+          <h2>共享规则库</h2>
+          <span id="sharedSummary"></span>
+        </div>
+        <form id="sharedForm" class="shared-form">
+          <div class="shared-form-row">
+            <label>
+              分类
+              <select id="sharedCategoryInput">
+                <option value="forgets">容易忘的规则</option>
+                <option value="disputes">常见争议</option>
+                <option value="setup">开局准备</option>
+                <option value="scoring">计分提醒</option>
+              </select>
+            </label>
+            <label>
+              共享内容
+              <textarea
+                id="sharedTextInput"
+                rows="2"
+                required
+                placeholder="例：同一系列通用的结算顺序，勾选适用游戏后会自动出现在各游戏详情里"
+              ></textarea>
+            </label>
+          </div>
+          <div class="shared-games" id="sharedGamePicker"></div>
+          <div class="shared-form-actions">
+            <button class="primary" id="sharedSubmitBtn" type="submit">加入共享规则</button>
+            <button id="sharedCancelBtn" type="button" hidden>取消编辑</button>
+            <span id="sharedHint" class="form-hint"></span>
+          </div>
+        </form>
+        <div id="sharedList" class="shared-list"></div>
+      </section>
+
       <section class="layout">
         <aside class="panel">
           <h2>新增桌游</h2>
